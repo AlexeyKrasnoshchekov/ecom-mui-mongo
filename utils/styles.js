@@ -1,6 +1,6 @@
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@mui/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   navbar: {
     backgroundColor: '#203040',
     '& a': {
@@ -59,12 +59,12 @@ const useStyles = makeStyles((theme) => ({
   menuButton: { padding: 0 },
   mt1: { marginTop: '1rem' },
   // search
-  searchSection: {
-    display: 'none',
-    [theme.breakpoints.up('md')]: {
-      display: 'flex',
-    },
-  },
+  //   searchSection: {
+  //     display: 'none',
+  //     [theme.breakpoints.up('md')]: {
+  //       display: 'flex',
+  //     },
+  //   },
   searchForm: {
     border: '1px solid #ffffff',
     backgroundColor: '#ffffff',

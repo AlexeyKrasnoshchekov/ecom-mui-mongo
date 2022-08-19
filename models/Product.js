@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
+const { Schema } = mongoose;
 
-const reviewSchema = new mongoose.Schema(
+const reviewSchema = new Schema(
   {
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     name: { type: String, required: true },
@@ -12,7 +13,7 @@ const reviewSchema = new mongoose.Schema(
   }
 );
 
-const productSchema = new mongoose.Schema(
+const productSchema = new Schema(
   {
     name: { type: String, required: true },
     slug: { type: String, required: true, unique: true },
@@ -34,5 +35,6 @@ const productSchema = new mongoose.Schema(
 );
 
 const Product =
-  mongoose.models.Product || mongoose.model('Product', productSchema);
+  mongoose.models?.Product || mongoose.model('Product', productSchema);
+
 export default Product;
